@@ -40,6 +40,7 @@ export class ProductsController {
   create(@Body() productData: CreateProductDTO) {
     return this.productsService.create(productData);
   }
+
   @Put('/:id')
   async update(
     @Param('id', new ParseUUIDPipe()) id: string,
@@ -50,5 +51,17 @@ export class ProductsController {
 
     await this.productsService.updateById(id, productData);
     return { success: true };
+  }
+
+  @Get('/extended')
+  getAllExtended(): any {
+    return this.productsService.getAllExtended();
+  }
+
+  @Get('/extended/:id')
+  async getExtendedById(@Param('id', new ParseUUIDPipe()) id: string) {
+    const prod = await this.productsService.getExtendedById(id);
+    if (!prod) throw new NotFoundException('Product not found');
+    return prod;
   }
 }
