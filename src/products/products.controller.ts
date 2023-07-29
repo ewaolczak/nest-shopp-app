@@ -11,7 +11,7 @@ import {
 import { ProductsService } from './products.service';
 import { CreateProductDTO } from './dtos/create-product.dto';
 import { ParseUUIDPipe } from '@nestjs/common';
-import { UpdateProductDTO } from './dtos/update-product.dto';
+import { UpdateProductDTO } from './dtos/products/update-product.dto';
 
 @Controller('products')
 export class ProductsController {
