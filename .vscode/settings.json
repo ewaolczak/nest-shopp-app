@@ -1,9 +1,8 @@
 {
   "prettier.bracketSameLine": true,
   "prettier.embeddedLanguageFormatting": "auto",
-  "prettier.jsxSingleQuote": true,
+  "prettier.jsxSingleQuote": false,
   "prettier.quoteProps": "preserve",
   "prettier.singleQuote": true,
-  "prettier.trailingComma": "all",
-  
+  "prettier.trailingComma": "all"
 }
